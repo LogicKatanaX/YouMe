@@ -31,6 +31,8 @@ Deploy to Vercel
 3. Set Root Directory to online-nextjs.
 4. Build command: npm run build
 5. Output defaults to Next.js standard output.
+6. Set environment variable `YOUME_API_BASE_URL` to your Flask backend origin (for example, `https://api.example.com`).
+   - Next.js rewrites API paths (such as `/admin_profile` and `/api/*`) to this backend so dashboard requests receive JSON/API responses instead of site HTML fallbacks.
 
 Implementation notes
 - Dashboard markup is loaded from `public/youme-body.html`.
